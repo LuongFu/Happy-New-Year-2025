@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #001d3d, #000);
+  font-family: Arial, sans-serif;
+}
+
+.fireworks-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff4081, 0 0 30px #ff4081;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+      transform: translate(-50%, -50%) scale(1);
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff4081, 0 0 30px #ff4081;
+  }
+  to {
+      transform: translate(-50%, -50%) scale(1.1);
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4081, 0 0 40px #ff4081;
+  }
+}
